@@ -137,3 +137,120 @@ body {
         border: 2px solid var(--primary-lighter);
         border-radius: 10px;
     }
+
+    .form-group input:focus {
+        border: 2px solid #16164d;
+    }
+
+    .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+
+
+    .remember-me {
+        display: grid;
+        grid-template-columns: 16px auto;
+        gap: 9.6px;
+    }
+
+   input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: grid;
+    place-content: center;
+   }
+ 
+   .remember-me input {
+    width: 16px;
+    height: 16px;
+    margin-right: 4.8px;
+    border: 1px solid var(--text-light);
+    border-radius: 2px;
+   }
+
+   input[type="checkbox"]::before {
+    content: "";
+    width: 10.4px;
+    height: 10.4px;
+    background-color: white;
+    transform: scale(0);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 16px 16px var(--form-control-color);
+   }
+
+   input[type="checkbox"]:checked::before {
+    transform: scale(1);
+   }
+
+   .remember-me input:checked {
+    background: var(--primary-gradient);
+   }
+
+   .remember-me label {
+    color: var(--text-dark);
+    user-select: none;
+   }
+
+   .remember-forgot a {
+    color: var(--primary);
+   }
+
+    .remember-forgot a:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--primary);
+    }
+
+    .login-btn,
+    .google-sigin {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 9.6px;
+        font-weight:  500;
+        padding: 8px 0;
+        border-radius: 8px;
+    }
+
+    .login-btn {
+        color: white;
+        background: var(--primary-gradient);
+    }
+
+    .login-btn::hover {
+        opacity: 0.9;
+    }
+
+    .or-divider {
+        width: 100%;
+        font-weight: 600;
+        color: var(--text-light);
+        margin-block: 24px;
+        text-align: center;
+        position: relative;
+    }
+
+    .or-divider::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 45%;
+        background-color: var(--text-light);
+    }
+
+    .google-sigin {
+        border: 2px solid var(--primary);
+    }
+
+    .google-sigin object {
+        width: 24px;
+        height: 24px;
+    }
